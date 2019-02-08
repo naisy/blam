@@ -14,11 +14,9 @@ This fork is for offline BLAM. Online BLAM (Realtime SLAM) should use erik-nelso
 ## Build Instructions
 This repository contains two ROS workspaces (one internal, one external). The build process is proctored by the `update` script. To build, first make sure that you do not have any other ROS workspaces in your `ROS_PACKAGE_PATH`, then clone the repository and from the top directory execute
 
-### after GTSAM installed
-* [GTSAM](https://collab.cc.gatech.edu/borg/gtsam)
-
+after [GTSAM](https://collab.cc.gatech.edu/borg/gtsam) installed
 ```bash
-./install.sh
+./build.sh
 ```
 
 ## Run Instructions
@@ -37,16 +35,15 @@ To run in offline mode, i.e. by loading a bagfile and processing its data as
 fast as possible, set the bagfile name and scan topic in
 `blam_example/launch/test_offline.launch`, and use
 
-(edit blam_offline.sh for your rosbag file)
 ```bash
-./blam_offline.sh
+./blam_offline.sh vlp-16.bag
 ```
 
 An example .rviz configuration file is provided under
 `blam_example/rviz/lidar_slam.rviz`.
 
 ```bash
-./rviz_run.sh
+./blam_rviz.sh
 ```
 
 ## PCD Files
@@ -54,6 +51,20 @@ An example .rviz configuration file is provided under
 ls -l pcd_online
 ls -l pcd_offline
 ```
+
+## VLP-16: Save to ROSBAG
+```bash
+./vlp-16_rosbag_record.sh output.bag
+```
+
+## VLP-16: RVIz
+* flame: velodyne
+* add: PointCloud2
+
+```bash
+./vlp-16_rviz.sh
+```
+
 
 ## Dependencies
 
