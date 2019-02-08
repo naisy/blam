@@ -15,6 +15,14 @@ else
     echo "ERROR! ${PARAMETER_FILE} is not found."
     exit
 fi
+# pcd downsize (and good for accuracy)
+PARAMETER_FILE=internal/src/point_cloud_mapper/config/parameters.yaml
+if [ -f ${PARAMETER_FILE} ]; then
+    sed -i 's/^  octree_resolution: 0.05$/  octree_resolution: 0.2/g' ${PARAMETER_FILE}
+else
+    echo "ERROR! ${PARAMETER_FILE} is not found."
+    exit
+fi
 
 # mswenson17's update
 # https://github.com/lidar-slam-benchmarking/blam/commit/d9393e94236c8f2d6f2d121608fb54c2d6479700
