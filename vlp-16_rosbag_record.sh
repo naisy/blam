@@ -2,7 +2,6 @@
 # ./vlp-16_rosbag_record.sh output.bag
 
 #source ${TOP_DIR}/internal/devel/setup.bash
-OUTPUT_BAG="vlp-16.bag"
 
 case $1 in
     /*\.bag)

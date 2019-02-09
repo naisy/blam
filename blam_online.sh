@@ -7,7 +7,6 @@ TOPIC=/blam/blam_slam/octree_map
 #TOPIC=/blam/blam_slam/octree_map_updates # many outputs
 
 source ${TOP_DIR}/internal/devel/setup.bash
-rm -rf $OUTPUT_DIR
 mkdir -p $OUTPUT_DIR
 
 roscore&

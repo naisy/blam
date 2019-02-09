@@ -14,7 +14,7 @@ This fork is for offline BLAM. Online BLAM (Realtime SLAM) should use erik-nelso
 ## Build Instructions
 This repository contains two ROS workspaces (one internal, one external). The build process is proctored by the `update` script. To build, first make sure that you do not have any other ROS workspaces in your `ROS_PACKAGE_PATH`, then clone the repository and from the top directory execute
 
-after [GTSAM](https://collab.cc.gatech.edu/borg/gtsam) installed
+after [GTSAM](https://bitbucket.org/gtborg/gtsam) installed
 ```bash
 ./build.sh
 ```
@@ -71,6 +71,6 @@ ls -l pcd_offline
 ***BLAM!*** relies on system installations of the following packages:
 
 * [ROS](http://wiki.ros.org/ROS/Installation)
-* [GTSAM](https://collab.cc.gatech.edu/borg/gtsam)
+* [GTSAM](https://bitbucket.org/gtborg/gtsam)
 
 GTSAM in particular should be installed from source using the latest version of the develop branch from https://bitbucket.org/gtborg/gtsam. GTSAM relies on Boost, an incorrect version of which will interfere with some of ROS' packages if ROS is not upgraded to at least Indigo. ROS Indigo, in turn, relies on Ubuntu 14.04.
