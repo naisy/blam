@@ -47,7 +47,7 @@ cd ..
 
 bash ./update
 # compile error. boost compile option change
-grep -rl . -e '-lBoost::timer' | xargs -n1 file | grep "ASCII text" | cut -d':' -f1 | xargs sed -i 's/-lBoost::timer/-lboost_timer/g'
+grep -rl ./internal -e '-lBoost::timer' | xargs -n1 file | grep "ASCII text" | cut -d':' -f1 | xargs sed -i 's/-lBoost::timer/-lboost_timer/g'
 # build continue
 bash ./update
 

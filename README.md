@@ -12,9 +12,11 @@
 This fork is for offline BLAM. Online BLAM (Realtime SLAM) should use erik-nelson's repository.
 
 ## Build Instructions
-This repository contains two ROS workspaces (one internal, one external). The build process is proctored by the `update` script. To build, first make sure that you do not have any other ROS workspaces in your `ROS_PACKAGE_PATH`, then clone the repository and from the top directory execute
+This repository contains two ROS workspaces (one internal, one external). The build process is proctored by the `build.sh` script. To build, first make sure that you do not have any other ROS workspaces in your `ROS_PACKAGE_PATH`, then clone the repository and from the top directory execute
 
-after [GTSAM](https://bitbucket.org/gtborg/gtsam) installed
+First, install MKL and GTSAM.
+* [Intel MKL](https://software.intel.com/en-us/mkl/)
+* [GTSAM](https://bitbucket.org/gtborg/gtsam)
 ```bash
 ./build.sh
 ```
