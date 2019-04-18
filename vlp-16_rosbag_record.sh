@@ -5,10 +5,10 @@
 
 case $1 in
     /*\.bag)
-        OUTPUT_BAG=$2
+        OUTPUT_BAG=$1
         ;;
     *.bag)
-        OUTPUT_BAG=$PWD/$2
+        OUTPUT_BAG=$PWD/$1
 esac
 echo ${OUTPUT_BAG}
 
