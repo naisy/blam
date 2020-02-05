@@ -16,5 +16,5 @@ roscore &
 sleep 3
 roslaunch velodyne_pointcloud VLP16_points.launch &
 sleep 1
-rosrun rosbag record -O $OUTPUT_BAG /velodyne_points
+rosrun rosbag record -a -O $OUTPUT_BAG
 
